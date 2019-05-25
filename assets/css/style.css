@@ -1,0 +1,7 @@
+.topic-span {
+    display: inline-block;
+    margin: 5px 5px 20px 5px ;
+    text-align: center;
+    background-color: black;
+    color: rgb(209, 209, 209)
+}
