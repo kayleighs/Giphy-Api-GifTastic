@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gif!</title>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>
+                    Click on a button for Gifs!
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+            <div id="buttons-view"></div>
+            </div>
+            <div class="col-md-4">
+                <form role="form">
+                    <div class="form-topics">
     
+                        <label for="input-new">
+                            Add another topic!
+                        </label>
+                        <input type="text class="form-control" id="input-new" />
+                    </div>
+                    <button id="add-topic" type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 content">
+            </div>
+        </div>
+    </div>
+<script src="assets/javascript/app.js"></script>
+
 </body>
 </html>
