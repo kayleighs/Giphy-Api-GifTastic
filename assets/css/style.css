@@ -13,7 +13,8 @@ body {
 .rating {
     background-color:  rgb(117, 137, 138);
     border-radius: 10px;
-    margin-bottom: 0
+    margin-bottom: 0;
+    padding: 7px;
 }
 
 .topic{
