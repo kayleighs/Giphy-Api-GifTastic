@@ -1,7 +1,62 @@
+body {
+    background: url(../images/seamless_paper_texture.png)
+}
 .topic-span {
     display: inline-block;
     margin: 5px 5px 20px 5px ;
     text-align: center;
-    background-color: black;
-    color: rgb(209, 209, 209)
+    background-color:  rgb(117, 137, 138);
+    color: rgba(255, 255, 255,100);
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgb(61, 61, 61);
 }
+.rating {
+    background-color:  rgb(117, 137, 138);
+    border-radius: 10px;
+    margin-bottom: 0
+}
+
+.topic{
+    background-color:  rgba(164,190,191);
+    border-radius: 10px;
+    color: rgba(255, 255, 255,100);
+    padding: 7px;
+    border: none;
+    margin: 10px
+}
+.topic:hover {
+        background-color:  rgb(191,187,164)
+
+}
+#add-topic {
+    background-color:  rgb(117, 137, 138);
+    border-radius: 10px;
+    color: rgba(255, 255, 255);
+    padding: 7px;
+    border: none;
+    margin: 5px
+}
+#add-topic:hover {
+    background-color:  rgb(134, 131, 113)
+
+}
+.header {
+    background-color:  rgba(164,190,191);
+    border-radius: 10px;
+    color: rgba(255, 255, 255,100);
+    padding: 15px;
+    border: none;
+    margin: 10px
+
+}
+.form {
+    background-color:  rgba(164,190,191);
+    border-radius: 10px;
+    color: rgba(255, 255, 255,100);
+    padding: 15px;
+    border: none;
+    margin: 10px
+}
+/*  background-color:  rgb(140,131,79,55); 
+    color: rgb(242, 239, 233,95)
+        background-color:  rgba(164,190,191)*/

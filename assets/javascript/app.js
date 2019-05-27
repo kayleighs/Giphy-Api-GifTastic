@@ -1,4 +1,7 @@
+
+
 var topics = ["The Matrix", "Mad Max"]
+
 
 function renderButtons() {
     $("#buttons-view").empty();
@@ -8,7 +11,6 @@ function renderButtons() {
         a.attr("data-name", topics[i]);
         a.text(topics[i]);
         $("#buttons-view").append(a);
-
     }
     $(".topic").on("click", function () {
         $(".content").empty();
@@ -28,17 +30,37 @@ function renderButtons() {
                 for (var i = 0; i < results.length; i += 1) {
                     var topicSpan = $("<span>");
                     topicSpan.addClass("topic-span")
-                    var p = $("<p>").text("Rating: " + results[i].rating);
-                    var topicImage = $("<img>");
-                    topicImage.attr("src", results[i].images.fixed_height.url);
-                    topicSpan.append(p);
+
+                    var ratingP = $("<p>").text("Rating: " + results[i].rating.toUpperCase());
+                    ratingP.addClass("rating")
+
+                    var topicImage = $("<img>")
+                    var stillGif = results[i].images.fixed_height_still.url
+                    var animatedGif = results[i].images.fixed_height.url
+                    topicImage.addClass("gif");
+                    topicImage.attr("src", results[i].images.fixed_height_still.url);
+                    topicImage.attr({ "data-animate": animatedGif, "data-still": stillGif });
+                    topicImage.attr({ "src": stillGif, "data-state": "still" });
+
+                    topicSpan.append(ratingP);
                     topicSpan.append(topicImage);
                     $(".content").prepend(topicSpan);
                 }
             });
     });
-
 }
+
+$(document).on("click", ".gif", function () {
+    console.log("gif clicked")
+    var state = $(this).attr("data-state");
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+    }
+});
 
 console.log(topics)
 $("#add-topic").on("click", function(event){
@@ -48,6 +70,5 @@ $("#add-topic").on("click", function(event){
     renderButtons();
     console.log(topics)
 });
-
 
 renderButtons();
