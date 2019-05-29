@@ -67,13 +67,25 @@ $(document).on("click", ".gif", function () {
 });
 
 //add buttons for new topics
+
 console.log(topics)
 $("#add-topic").on("click", function(event){
     event.preventDefault();
+    var input = document.getElementById("input-new").value
+    function inputCheck (){
+    if (input.trim() == "") {
+       console.log("Please enter something")
+        alert("Please enter something")
+   }
+    else {
     var topic = $("#input-new").val().trim();
     topics.push(topic);
     renderButtons();
     console.log(topics)
+
+}
+}
+    inputCheck()
 });
 
 //saving to favorites and local storage
