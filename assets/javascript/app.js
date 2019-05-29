@@ -1,5 +1,4 @@
 var topics = ["The Matrix", "Mad Max", "Star Wars"]
-
 function renderButtons() {
     $("#buttons-view").empty();
     for (var i =0; i <topics.length; i +=1) {
@@ -82,8 +81,7 @@ $("#add-topic").on("click", function(event){
     topics.push(topic);
     renderButtons();
     console.log(topics)
-
-}
+    }
 }
     inputCheck()
 });
@@ -138,9 +136,8 @@ var list = JSON.parse(localStorage.getItem("favGif"));
 if (!Array.isArray(list)) {
     list = [];
 }
-
+//render the favorites list to page
 renderFavs(list);
-
 
 //render buttons function
 renderButtons();

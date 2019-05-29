@@ -23,7 +23,9 @@ body {
     color: rgba(255, 255, 255,100);
     padding: 7px;
     border: none;
-    margin: 10px
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgb(61, 61, 61);
 }
 .topic:hover {
         background-color:  rgb(191,187,164)
@@ -51,16 +53,21 @@ button:focus  , .button:active {
     color: rgba(255, 255, 255,100);
     padding: 15px;
     border: none;
-    margin: 10px
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgb(61, 61, 61);
 
 }
+
 .form {
     background-color:  rgba(164,190,191);
     border-radius: 10px;
     color: rgba(255, 255, 255,100);
     padding: 15px;
     border: none;
-    margin: 10px
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px rgb(61, 61, 61);
 }
 
 .save-gif {
@@ -95,6 +102,7 @@ button:focus  , .button:active {
     background-color:  rgb(134, 131, 113)
 
 }
+
 /*  background-color:  rgb(140,131,79,55); 
     color: rgb(242, 239, 233,95)
         background-color:  rgba(164,190,191)*/
