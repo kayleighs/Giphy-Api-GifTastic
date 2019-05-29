@@ -1,6 +1,4 @@
-
-var topics = ["The Matrix", "Mad Max"]
-
+var topics = ["The Matrix", "Mad Max", "Star Wars"]
 
 function renderButtons() {
     $("#buttons-view").empty();
@@ -16,7 +14,7 @@ function renderButtons() {
         console.log("clicked")
         var searchTerm = $(this).attr("data-name");
         var key = "peKXuRg486cY3D1jNy2naHJwSQq57NzQ"
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=" + key + "&limit=10" + "&offset=0"
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "&api_key=" + key + "&limit=10" + "&offset=0"
 
         $.ajax({
             url: queryURL,
