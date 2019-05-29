@@ -1,5 +1,4 @@
 
-
 var topics = ["The Matrix", "Mad Max"]
 
 
@@ -13,7 +12,7 @@ function renderButtons() {
         $("#buttons-view").append(a);
     }
     $(".topic").on("click", function () {
-   //     $(".content").empty();
+      $(".content").empty();
         console.log("clicked")
         var searchTerm = $(this).attr("data-name");
         var key = "peKXuRg486cY3D1jNy2naHJwSQq57NzQ"
@@ -73,7 +72,7 @@ $(document).on("click", ".gif", function () {
 console.log(topics)
 $("#add-topic").on("click", function(event){
     event.preventDefault();
-    var topic = $(this.results[i].images).val().trim();
+    var topic = $("#input-new").val().trim();
     topics.push(topic);
     renderButtons();
     console.log(topics)
